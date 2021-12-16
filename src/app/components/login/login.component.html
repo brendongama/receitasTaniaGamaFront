@@ -1,0 +1,15 @@
+<div class="container">
+    <form class="form mat-elevation-z20">
+        <h1>Receitas Tânia Gama</h1>
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Login</mat-label>
+          <input [(ngModel)]="creds.login" name="login" [formControl]="login" required matInput placeholder="login123">
+        </mat-form-field>
+      
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Senha</mat-label>
+            <input [(ngModel)]="creds.senha" name="senha" [formControl]="senha" required matInput type="password" placeholder="Ex. 123">
+          </mat-form-field>
+          <button (click)="logar()" [disabled]="!validaCampos()" mat-stroked-button class="full-width mat-elevation-z10" color="primary">Login</button>
+      </form>
+</div>
