@@ -1,0 +1,39 @@
+<div class="container">
+  <mat-card class="example-card" >
+    <mat-card-content>
+      <form class="example-form" class="example-full-width"></form>
+      <mat-form-field class="fullWidth" appearance="fill">
+          <mat-label>Receita</mat-label>
+          <input matInput
+          [(ngModel)]="detalhe.titulo"
+          name="titulo"
+          [disabled]="true"
+          class="colorText">
+        </mat-form-field>
+      
+        <mat-form-field class="fullWidth" appearance="fill">
+          <mat-label>Ingredientes</mat-label>
+          <textarea matInput
+          [(ngModel)]="detalhe.ingredientes"
+          name="ingredientes"
+          [disabled]="true"
+          class="inputText colorText"></textarea>
+          
+        </mat-form-field>  
+
+        <mat-form-field class="fullWidth" appearance="fill">
+          <mat-label>Modo de preparo</mat-label>
+          <textarea matInput
+          [(ngModel)]="detalhe.modoPreparo"
+          name="modoPreparo"
+          [disabled]="true" class="inputText colorText"></textarea>
+        </mat-form-field> 
+        <form class="example-form" class="example-full-width"></form>
+        <button routerLink="../../" class="fullWidth mat-elevation-z4" mat-stroked-button color="warn">Voltar</button>
+    </mat-card-content>
+    </mat-card>
+</div>
+            
+
+
+

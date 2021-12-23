@@ -1,0 +1,29 @@
+<div class="container" >
+    <mat-card class="example-card" >
+        <mat-card-title>Incluir Receita</mat-card-title>       
+        <mat-card-content>
+            <form class="example-form" class="example-full-width">
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Nome da receita</mat-label>
+                  <input matInput placeholder="Ex. Pizza" 
+                  [(ngModel)]="receita.titulo"
+                  name="titulo">
+                </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Ingredientes</mat-label>
+                    <textarea matInput
+                    [(ngModel)]="receita.ingredientes"
+                    name="ingredientes"></textarea>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Modo de preparo</mat-label>
+                    <textarea matInput
+                    [(ngModel)]="receita.modoPreparo"
+                    name="modoPreparo"></textarea>
+                  </mat-form-field>
+              </form>      
+              <button (click)="create()" mat-raised-button color="primary" class="example-full-width">Incluir</button>
+              <button routerLink="/receitas" mat-raised-button color="primary" class="example-full-width">Receitas</button>  
+        </mat-card-content>       
+      </mat-card>
+</div>

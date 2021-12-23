@@ -16,13 +16,23 @@ import {MatButtonModule} from '@angular/material/button';
 import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './components/home/home.component';
 import { ReceitaslistComponent } from './components/receitaslist/receitaslist.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { AuthInterceptorProvaider } from './interceptor/auth.interceptor';
+import { ReceitasincluirComponent } from './components/receitasincluir/receitasincluir.component';
+import {MatTableModule} from '@angular/material/table';
+import { ReceitasdetalhesComponent } from './components/receitasdetalhes/receitasdetalhes.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    ReceitaslistComponent
+    ReceitaslistComponent,
+    ReceitasincluirComponent,
+    ReceitasdetalhesComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +43,11 @@ import { ReceitaslistComponent } from './components/receitaslist/receitaslist.co
     HttpClientModule,
     MatInputModule,
     MatButtonModule,
+    MatToolbarModule,
+    MatTableModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
     ToastrModule.forRoot({
       timeOut: 4000,
       closeButton: true,
@@ -40,6 +55,7 @@ import { ReceitaslistComponent } from './components/receitaslist/receitaslist.co
     })
 
   ], 
+  providers: [AuthInterceptorProvaider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
