@@ -24,6 +24,8 @@ import { ReceitasdetalhesComponent } from './components/receitasdetalhes/receita
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatIconModule} from '@angular/material/icon';
+import { ReceitasdeleteComponent } from './components/receitasdelete/receitasdelete.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     HomeComponent,
     ReceitaslistComponent,
     ReceitasincluirComponent,
-    ReceitasdetalhesComponent
+    ReceitasdetalhesComponent,
+    ReceitasdeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +51,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatCardModule,
     MatFormFieldModule,
     MatPaginatorModule,
+    MatIconModule,
     ToastrModule.forRoot({
       timeOut: 4000,
       closeButton: true,

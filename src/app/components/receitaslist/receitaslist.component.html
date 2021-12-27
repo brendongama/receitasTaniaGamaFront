@@ -19,7 +19,15 @@
             <th mat-header-cell *matHeaderCellDef> Ingredientes </th>
             <td mat-cell *matCellDef="let element">
                <a routerLink="detalhes/{{ element.id }}">
-                  <i class="material-icons edit">edit</i>
+                  <i class="material-icons edit">description</i>
+               </a>
+            </td>
+         </ng-container>
+         <ng-container matColumnDef="deletar">
+            <th mat-header-cell *matHeaderCellDef> Deletar </th>
+            <td mat-cell *matCellDef="let element">
+               <a routerLink="delete/{{ element.id }}">
+                  <i class="material-icons edit">delete</i>
                </a>
             </td>
          </ng-container>

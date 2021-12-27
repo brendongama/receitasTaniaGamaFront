@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReceitasincluirComponent } from './components/receitasincluir/receitasincluir.component';
 import { ReceitasdetalhesComponent } from './components/receitasdetalhes/receitasdetalhes.component';
+import { ReceitasdeleteComponent } from './components/receitasdelete/receitasdelete.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
     path: '', component: HomeComponent, canActivate: [AuthGuard], children: [
       { path: 'receitas', component: ReceitaslistComponent },
       { path: 'receitas/incluir', component: ReceitasincluirComponent },
-      { path: 'receitas/detalhes/:id', component: ReceitasdetalhesComponent }
+      { path: 'receitas/detalhes/:id', component: ReceitasdetalhesComponent },
+      { path: 'receitas/delete/:id', component: ReceitasdeleteComponent }
     ]
   } 
 ];

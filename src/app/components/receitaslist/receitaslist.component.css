@@ -14,3 +14,7 @@ table {
   .container {
     margin: 10px;
   }
+
+  a{
+    margin-right: 20px;
+  }

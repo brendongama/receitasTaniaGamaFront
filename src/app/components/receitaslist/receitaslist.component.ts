@@ -13,7 +13,7 @@ export class ReceitaslistComponent implements OnInit {
 
   ELEMENT_DATA: Receitas[] = [];
 
-  displayedColumns: string[] = ['titulo','detalhes']; 
+  displayedColumns: string[] = ['titulo','detalhes', 'deletar']; 
   dataSource = new MatTableDataSource<Receitas>(this.ELEMENT_DATA);
   
   @ViewChild(MatPaginator)

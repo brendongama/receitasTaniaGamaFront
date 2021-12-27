@@ -22,4 +22,8 @@ export class ReceitasService {
   create(pedido: Receitas): Observable<Receitas> {
     return this.http.post<Receitas>(`${API_CONFIG.baseUrl}/receita`, pedido);
   }
+
+  delete(id: any): Observable<Receitas> {
+    return this.http.delete<Receitas>(`${API_CONFIG.baseUrl}/receita/${id}`);
+  }
 }

@@ -1,0 +1,15 @@
+.fullWidth {
+    width: 100%;
+ }
+
+ .inputText {
+     height: 150px;
+ }
+
+ .colorText{
+     color: black;
+ }
+
+ button {
+     margin-bottom: 15px;
+ }
