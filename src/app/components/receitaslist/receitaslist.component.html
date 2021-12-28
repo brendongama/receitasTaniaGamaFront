@@ -1,20 +1,15 @@
 <div class="container">
-
-    <h1>Lista de receitas</h1> 
-    <mat-form-field appearance="standard">
+    <mat-card-title *ngIf="dataSource.data.length > 0">Lista de receitas</mat-card-title>
+    <mat-form-field appearance="standard" *ngIf="dataSource.data.length > 0">
        <mat-label>Filter</mat-label>
        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
-     </mat-form-field>
- 
-    <div class="mat-elevation-z8">
- 
-       <table mat-table [dataSource]="dataSource">
- 
+     </mat-form-field> 
+    <div class="mat-elevation-z8"> 
+       <table mat-table [dataSource]="dataSource" *ngIf="dataSource.data.length > 0"> 
           <ng-container matColumnDef="titulo">
              <th mat-header-cell *matHeaderCellDef> Nome </th>
              <td mat-cell *matCellDef="let element"> {{element.titulo}} </td>
           </ng-container>
-
           <ng-container matColumnDef="detalhes">
             <th mat-header-cell *matHeaderCellDef> Ingredientes </th>
             <td mat-cell *matCellDef="let element">
@@ -30,11 +25,15 @@
                   <i class="material-icons edit">delete</i>
                </a>
             </td>
-         </ng-container>
- 
+         </ng-container> 
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>          
   </table>
-  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  <mat-paginator *ngIf="dataSource.data.length > 0" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  
+ </div> 
+ <div class="cardNaoLista" *ngIf="dataSource.data.length == 0">
+   <mat-card-title>Não há receitas para serem listadas</mat-card-title>
  </div>
+ 
+ 

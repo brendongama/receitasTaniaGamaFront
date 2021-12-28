@@ -6,24 +6,31 @@
                 <mat-form-field class="example-full-width" appearance="legacy">
                   <mat-label>Nome da receita</mat-label>
                   <input matInput placeholder="Nome da receita"
+                  [formControl]="titulo"
+                  required
                   [(ngModel)]="receita.titulo"
                   name="titulo"> 
                 </mat-form-field>
                 <mat-form-field class="example-full-width" appearance="legacy">
                     <mat-label>Ingredientes</mat-label>
                     <textarea matInput
+                    [formControl]="ingredientes"
+                    required
                     [(ngModel)]="receita.ingredientes"
                     name="ingredientes"></textarea>
                   </mat-form-field>
                   <mat-form-field class="example-full-width" appearance="legacy">
                     <mat-label>Modo de preparo</mat-label>
                     <textarea matInput
+                    [formControl]="modoPreparo"
+                    required
                     [(ngModel)]="receita.modoPreparo"
                     name="modoPreparo"></textarea>
                   </mat-form-field>
+                  <button [disabled]="!validaCampos()" (click)="create()" mat-raised-button color="primary" class="example-full-width">Incluir</button>
+                  <button routerLink="/receitas" mat-raised-button color="primary" class="example-full-width">Receitas</button> 
               </form>      
-              <button (click)="create()" mat-raised-button color="primary" class="example-full-width">Incluir</button>
-              <button routerLink="/receitas" mat-raised-button color="primary" class="example-full-width">Receitas</button>  
+               
         </mat-card-content>       
       </mat-card>
 </div>

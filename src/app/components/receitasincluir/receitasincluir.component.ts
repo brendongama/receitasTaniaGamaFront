@@ -3,6 +3,7 @@ import { Receitas } from 'src/app/models/receita';
 import { ReceitasService } from 'src/app/services/receitas.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-receitasincluir',
@@ -17,6 +18,11 @@ export class ReceitasincluirComponent implements OnInit {
     ingredientes: '',
     modoPreparo: ''
   }
+
+  titulo = new FormControl(null, Validators.minLength(4));
+  ingredientes = new FormControl(null, Validators.minLength(4));
+  modoPreparo = new FormControl(null, Validators.minLength(4));
+
 
   constructor(private service: ReceitasService,
     private router:          Router,
@@ -39,6 +45,10 @@ export class ReceitasincluirComponent implements OnInit {
           this.toast.error(ex.error.message);
         }
       })
+    }
+
+    validaCampos(): boolean {
+      return this.titulo.valid && this.ingredientes.valid && this.modoPreparo.valid
     }
 
 }
