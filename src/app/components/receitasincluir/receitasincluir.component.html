@@ -2,20 +2,20 @@
     <mat-card class="example-card" >
         <mat-card-title>Incluir Receita</mat-card-title>       
         <mat-card-content>
-            <form class="example-form" class="example-full-width">
-                <mat-form-field class="example-full-width" appearance="fill">
+            <form class="example-form" appearance="legacy" class="example-full-width">
+                <mat-form-field class="example-full-width" appearance="legacy">
                   <mat-label>Nome da receita</mat-label>
-                  <input matInput placeholder="Ex. Pizza" 
+                  <input matInput placeholder="Nome da receita"
                   [(ngModel)]="receita.titulo"
-                  name="titulo">
+                  name="titulo"> 
                 </mat-form-field>
-                <mat-form-field class="example-full-width" appearance="fill">
+                <mat-form-field class="example-full-width" appearance="legacy">
                     <mat-label>Ingredientes</mat-label>
                     <textarea matInput
                     [(ngModel)]="receita.ingredientes"
                     name="ingredientes"></textarea>
                   </mat-form-field>
-                  <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-form-field class="example-full-width" appearance="legacy">
                     <mat-label>Modo de preparo</mat-label>
                     <textarea matInput
                     [(ngModel)]="receita.modoPreparo"

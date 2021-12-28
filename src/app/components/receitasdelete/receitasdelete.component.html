@@ -1,9 +1,8 @@
-delete
 <div class="container">
     <mat-card class="example-card" >
       <mat-card-content>
         <form class="example-form" class="example-full-width"></form>
-        <mat-form-field class="fullWidth" appearance="fill">
+        <mat-form-field class="fullWidth" appearance="legacy">
             <mat-label>Receita</mat-label>
             <input matInput
             [(ngModel)]="detalhe.titulo"
@@ -12,7 +11,7 @@ delete
             class="colorText">
           </mat-form-field>
         
-          <mat-form-field class="fullWidth" appearance="fill">
+          <mat-form-field class="fullWidth" appearance="legacy">
             <mat-label>Ingredientes</mat-label>
             <textarea matInput
             [(ngModel)]="detalhe.ingredientes"
@@ -21,7 +20,7 @@ delete
             class="inputText colorText"></textarea>            
           </mat-form-field>  
   
-          <mat-form-field class="fullWidth" appearance="fill">
+          <mat-form-field class="fullWidth" appearance="legacy">
             <mat-label>Modo de preparo</mat-label>
             <textarea matInput
             [(ngModel)]="detalhe.modoPreparo"

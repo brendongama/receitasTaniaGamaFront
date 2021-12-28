@@ -16,3 +16,11 @@
     margin: 10px;
     padding-bottom: 10px;
   }
+
+  mat-form-field {
+    background: white !important;
+  }
+
+  textarea {
+    height: 100px;
+  }
